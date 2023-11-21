@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acceuil</title>
+    <title>header</title>
     <link rel="icon" href="images/logo-esu.png">
 
     <!-- swiper css link  -->
@@ -24,12 +24,12 @@
 <body>
     <!-- header section starts  -->
     <section class="header">
-    <a href="index.php" class="logo"><img src="images/logo-ced.png" alt="logo" width=300>
+    <a href="index.php" class="logo"><img src="images/logo-ced.png" alt="Gestion des Presences" width=300>
 
     <nav class="navbar">
-    <a href="index.php">Acceuil</a>
-    <a href="about.php">Apropos</a>
-    <a href="procedure.php">Procedure</a>
+    <a href="index.php">Home</a>
+    <a href="enregitrement.php">Enregitrement</a>
+    <a href="repport.php">Rapport</a>
     
     <?php
       if (isset($_SESSION["useruid"])) {
