@@ -28,8 +28,8 @@
 
     <nav class="navbar">
     <a href="index.php">Home</a>
-    <a href="enregitrement.php">Enregitrement</a>
-    <a href="repport.php">Rapport</a>
+    <a href="enregistrement.php">Enregitrement</a>
+    <a href="rapport.php">Rapport</a>
     
     <?php
       if (isset($_SESSION["useruid"])) {
