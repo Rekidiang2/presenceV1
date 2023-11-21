@@ -1,5 +1,5 @@
 <?php
-  //session_start();
+  session_start();
   //include_once 'includes/functions.inc.php';
 ?>
 
@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>header</title>
+    <title>Acceuil</title>
     <link rel="icon" href="images/logo-esu.png">
 
     <!-- swiper css link  -->
@@ -24,14 +24,35 @@
 <body>
     <!-- header section starts  -->
     <section class="header">
-    <a href="index.php" class="logo"><img src="images/logo.png" alt="logo" width=200>
+    <a href="index.php" class="logo"><img src="images/logo-ced.png" alt="logo" width=300>
+
     <nav class="navbar">
-    <a href="index.php">Gestion des Presences</a>
+    <a href="index.php">Acceuil</a>
+    <a href="about.php">Apropos</a>
+    <a href="procedure.php">Procedure</a>
+    
+    <?php
+      if (isset($_SESSION["useruid"])) {
+        $jus = ucfirst($_SESSION['useruid']);
+        echo "<a href='profile1.php'><span id='menu-profile'>$jus</span></span></a>  ";
+        // echo ucfirst($_SESSION["useruid"]);         
+        echo "<a href='logout.php'><span id='menu-decon'>Déconnecter</span></a>";    
+        }
+      else {
+        echo "<a href='signup.php' class='menu-btn'></a>";
+        echo "<a href='login.php' class='menu-btn'></a>";
+        }
+    ?>
+
     </nav>
+   
     <div id="menu-btn" class="fas fa-bars"></div>
+
     </section>
 
     <!-- header section ends -->
+
+    <script src="js/script.js"></script>
 
 </body>
 </html>
