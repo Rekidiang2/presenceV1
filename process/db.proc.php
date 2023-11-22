@@ -6,7 +6,7 @@ $username="root";
 $pwd="";
 $db="presences";
 
-$con = mysqli_connect($host, $username, $pwd, $db);
+$con = mysqli_connect($host, $username, $pwd,$db);
 
 //Test Connection
 if(mysqli_connect_errno()){

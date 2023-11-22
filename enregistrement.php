@@ -5,6 +5,7 @@
 
     display_error();
     
+    
 ?>
 
 
@@ -38,9 +39,13 @@
                 <div class="heading">
                     <h3>Ajouter Agent</h3>
                 </div>
+
+                <!--Display Error-->
                 <?php if(isset($_GET['error'])) : ?>
                 <div class="error"><?php echo $_GET['error']; ?></div>
                 <?php endif; ?>
+                
+                <!--Form-->
                 <form method="post" action="process/registre.proc.php">
                     <div class="form-group">
                         <div>
@@ -58,25 +63,10 @@
                         <input type="submit" name="submit" class="submit-btn" value="Enregistre"
                             aria-label="Sizing example input">
                     </div>
-
-
-
-
-
                 </form>
-
-
             </div>
-
-
-
         </div>
-
-
     </section>
-
-
-
 </body>
 
 </html>
