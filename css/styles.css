@@ -130,7 +130,7 @@ section {
   /* --- SUB-HEADER -----*/
   .sub-header {
 	position: sticky;
-	top: 100px;
+	top: 50px;
 	left: 0;
 	right: 0;
 	z-index: -1;
@@ -156,6 +156,70 @@ section {
    cursor: pointer;
    color: var(--white);
  }
+
+ /*ENREGISTRMENT SECTION*/
+ .flex-container {
+	display: flex;
+	justify-content: center;
+  }
+
+.container1{
+	background:#E3E6E6;
+	margin: 20px auto;
+	overflow:auto;
+	width:100%;
+	min-height:100px;
+	padding: 20px;
+}
+
+/*FORMULAIRE*/
+
+#input{
+	width:90%;
+	min-height:40px;
+	margin:auto;
+	padding:0;
+}
+
+#input input[type='text']{
+	height:40px;
+	width:100%;
+	padding:3px;
+	margin-bottom:0px;
+	border:#666666 solid 1px;
+	font-size: larger;
+   border-radius: 0.3em;
+}
+
+#input input[placeholder]{
+ 
+   font-size: 2em;
+   font-weight: bold;
+}
+
+#input input[value]{
+   color: #fff;
+   font-size: 2em;
+   font-weight: bold;
+}
+
+#input .submit-btn{
+	padding:0px;
+	margin-bottom:20px;
+	width:100%;
+	margin:0 auto;
+	font-size: larger;
+   height: 50px;
+   background-color: var(--dark-light);
+   border-radius: 1em;
+}
+
+.form-group {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
 
 
 
