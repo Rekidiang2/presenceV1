@@ -127,6 +127,37 @@ section {
 }
 
 
+  /* --- SUB-HEADER -----*/
+  .sub-header {
+	position: sticky;
+	top: 100px;
+	left: 0;
+	right: 0;
+	z-index: -1;
+	background-color: var(--dark-light);
+	display: flex;
+	
+	padding: 2rem;
+	box-shadow: var(--box-shadow);
+	align-items: center;
+	justify-content: space-between;
+	height: 50px;
+	position: sticky;
+ }
+
+ .sub-header .left-title {
+	font-size: 2rem;
+	color: var(--white);
+	font-weight: bold;
+ }
+
+ #rigth-title{
+   font-size: 2.5rem;
+   cursor: pointer;
+   color: var(--white);
+ }
+
+
 
 
 
@@ -236,7 +267,7 @@ section {
       right: 0;
       background-color: var(--dark);
       border-top: var(--border);
-      padding: 2rem;
+      padding: 1rem;
       transition: .2s linear;
       clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
    }
@@ -247,7 +278,7 @@ section {
 
    .header .navbar a {
       display: block;
-      margin: 2rem;
+      margin: 1rem;
       text-align: center;
    }
 
