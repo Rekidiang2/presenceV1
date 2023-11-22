@@ -5,6 +5,8 @@
 
     display_error();
     
+    $query = "SELECT matricule, grade, nom, postnom FROM liste  ";
+	$shouts = mysqli_query($con, $query);
     
 ?>
 
@@ -17,6 +19,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>Enregistrement</title>
 </head>
 
@@ -65,7 +69,62 @@
                     </div>
                 </form>
             </div>
+
+           
+
+
+
         </div>
+        <div class="heading">
+                    <h3>Liste des Agents</h3>
+                </div>
+        <div class="search-container">
+            <input type="text" placeholder="Search...">
+            <button type="submit">Search</button>
+        </div>
+
+        <div class="container1 flex-container" >
+
+            <table class="table">
+                <thead>
+                    <th scope="col">#</th>
+                    <th scope="col">Nom</th>
+                    <th scope="col">Postnom</th>
+                    <th scope="col">Prenom</th>
+                    <th scope="col">Sexe</th>
+                    <th scope="col">Matricule</th>
+                    <th scope="col">Grade</th>
+                    
+
+                </thead>
+                <tbody>
+                    <?php foreach ($shouts as $i => $product) { ?>
+                    <tr>
+                        <th scope="row"><?php echo $i + 1 ?></th>
+                        <td><?php echo $product['nom'] ?></td>
+                        <td><?php echo $product['postnom'] ?></td>
+                        <td><?php echo 'Unknown' ?></td>
+                        <td><?php echo ' ' ?></td>
+                        <td><?php echo $product['matricule'] ?></td>
+                        <td><?php echo $product['grade'] ?></td>
+
+
+                    </tr>
+
+                    <?php } ?>
+                </tbody>
+
+
+
+            </table><br><br>
+         
+        </div>
+
+       
+
+
+            
+</div>
     </section>
 </body>
 
