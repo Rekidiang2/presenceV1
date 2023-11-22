@@ -5,7 +5,7 @@
 
     display_error();
     
-    $query = "SELECT matricule, grade, nom, postnom FROM liste  ";
+    $query = "SELECT * FROM liste  ";
 	$shouts = mysqli_query($con, $query);
     
 ?>
@@ -48,7 +48,7 @@
                 <?php if(isset($_GET['error'])) : ?>
                 <div class="error"><?php echo $_GET['error']; ?></div>
                 <?php endif; ?>
-                
+
                 <!--Form-->
                 <form method="post" action="process/registre.proc.php">
                     <div class="form-group">
@@ -70,61 +70,62 @@
                 </form>
             </div>
 
-           
+
 
 
 
         </div>
         <div class="heading">
-                    <h3>Liste des Agents</h3>
-                </div>
+            <h3>Liste des Agents</h3>
+        </div>
         <div class="search-container">
             <input type="text" placeholder="Search...">
             <button type="submit">Search</button>
         </div>
 
-        <div class="container1 flex-container" >
-
-            <table class="table">
-                <thead>
-                    <th scope="col">#</th>
-                    <th scope="col">Nom</th>
-                    <th scope="col">Postnom</th>
-                    <th scope="col">Prenom</th>
-                    <th scope="col">Sexe</th>
-                    <th scope="col">Matricule</th>
-                    <th scope="col">Grade</th>
-                    
-
-                </thead>
-                <tbody>
-                    <?php foreach ($shouts as $i => $product) { ?>
-                    <tr>
-                        <th scope="row"><?php echo $i + 1 ?></th>
-                        <td><?php echo $product['nom'] ?></td>
-                        <td><?php echo $product['postnom'] ?></td>
-                        <td><?php echo 'Unknown' ?></td>
-                        <td><?php echo ' ' ?></td>
-                        <td><?php echo $product['matricule'] ?></td>
-                        <td><?php echo $product['grade'] ?></td>
+        <div class="container1 flex-container">
+            <div id="table-box">
+                <table class="table">
+                    <thead>
+                        <th scope="col">#</th>
+                        <th scope="col">Nom</th>
+                        <th scope="col">Postnom</th>
+                        <th scope="col">Prenom</th>
+                        <th scope="col">Sexe</th>
+                        <th scope="col">Matricule</th>
+                        <th scope="col">Grade</th>
 
 
-                    </tr>
+                    </thead>
+                    <tbody>
+                        <?php foreach ($shouts as $i => $product) { ?>
+                        <tr>
+                            <th scope="row"><?php echo $i + 1 ?></th>
+                            <td><?php echo $product['nom'] ?></td>
+                            <td><?php echo $product['postnom'] ?></td>
+                            <td><?php echo 'Unknown' ?></td>
+                            <td><?php echo ' ' ?></td>
+                            <td><?php echo $product['matricule'] ?></td>
+                            <td><?php echo $product['grade'] ?></td>
 
-                    <?php } ?>
-                </tbody>
+
+                        </tr>
+
+                        <?php } ?>
+                    </tbody>
 
 
 
-            </table><br><br>
-         
+                </table><br><br>
+            </div>
+
         </div>
 
-       
 
 
-            
-</div>
+
+
+        </div>
     </section>
 
     <?php include_once 'footer.php'; ?>

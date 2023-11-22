@@ -285,6 +285,14 @@ button {
    }
 }
 
+#table-box {
+   width: 90%;
+   background: var(--white);
+   height: 400px;
+   margin: 20px auto;
+   overflow: auto;
+ }
+
 
 
 

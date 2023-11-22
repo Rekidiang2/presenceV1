@@ -41,6 +41,9 @@ error_reporting(E_ALL);
     <section class="main">
         <div class="container1 flex-container">
             <div id="input">
+            <div class="heading">
+                    <h3>Signalez Votre Presence</h3>
+                </div>
               
 
                 <!--Display Error-->
@@ -69,7 +72,10 @@ error_reporting(E_ALL);
 
         </div>
 
-        <div class="container2"><br>
+        <div class="container1"><br>
+        <div class="heading">
+                    <h3>Liste de Presence</h3>
+                </div>
 
         <div class="search-container">
         <input type="text" placeholder="Search...">
