@@ -1,5 +1,5 @@
 <?php
-require 'db.inc.php';
+require 'db.proc.php';
 
 function display_error(){
     ini_set('display_errors', 1);

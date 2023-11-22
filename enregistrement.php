@@ -1,6 +1,6 @@
 <?php 
-    include 'process/db.inc.php' ; 
-    include 'process/function.inc.php';
+    include 'process/db.proc.php' ; 
+    include 'process/function.proc.php';
 
 
     display_error();
@@ -41,7 +41,7 @@
                 <?php if(isset($_GET['error'])) : ?>
                 <div class="error"><?php echo $_GET['error']; ?></div>
                 <?php endif; ?>
-                <form method="post" action="includes/registre.inc.php">
+                <form method="post" action="process/registre.proc.php">
                     <div class="form-group">
                         <div>
                             <input type="text" name="nom" placeholder="Nom">
