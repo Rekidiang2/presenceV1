@@ -5,13 +5,7 @@
 
     display_error();
     
-    $query = "SELECT * FROM liste  ";
-	$shouts = mysqli_query($con, $query);
-    
 ?>
-
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -70,10 +64,6 @@
                 </form>
             </div>
 
-
-
-
-
         </div>
         <div class="heading">
             <h3>Liste des Agents</h3>
@@ -95,10 +85,9 @@
                         <th scope="col">Matricule</th>
                         <th scope="col">Grade</th>
 
-
                     </thead>
                     <tbody>
-                        <?php foreach ($shouts as $i => $product) { ?>
+                        <?php foreach (list_agent($con) as $i => $product) { ?>
                         <tr>
                             <th scope="row"><?php echo $i + 1 ?></th>
                             <td><?php echo $product['nom'] ?></td>
@@ -114,16 +103,10 @@
                         <?php } ?>
                     </tbody>
 
-
-
                 </table><br><br>
             </div>
 
         </div>
-
-
-
-
 
         </div>
     </section>

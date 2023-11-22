@@ -1,16 +1,9 @@
-<?php include 'process/db.proc.php' ; ?>
-<?php
-	//Create Select Query
-	date_default_timezone_set('Africa/Kinshasa');
-	$today = date('Y-m-d');
+<?php 
+include 'process/db.proc.php' ; 
+include 'process/function.proc.php';
 
-    ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-	
+display_error() ;
 
-	$query = "SELECT L.matricule, L.grade, L.nom, L.postnom, A.arrive, A.depart, A.dates FROM liste  AS L INNER JOIN arriveDepart AS A ON L.matricule = A.matricule  WHERE dates = DATE('$today') ORDER BY A.arrive DESC";
-	$shouts = mysqli_query($con, $query);
 ?>
 
 <!DOCTYPE html>
@@ -88,20 +81,20 @@ error_reporting(E_ALL);
                 <table class="table">
                     <thead>
                         <th scope="col">#</th>
-                        <th scope="col">Matricule</th>
+                        <th scope="col">Nom, Postnom et Prenom</th>
+                        <th scope="col">Sexe</th>
                         <th scope="col">Grade</th>
-                        <th scope="col">Nom et Postnom</th>
                         <th scope="col">Arrive</th>
                         <th scope="col">Depart</th>
 
                     </thead>
                     <tbody>
-                        <?php foreach ($shouts as $i => $product) { ?>
+                        <?php foreach (liste_presence($con) as $i => $product) { ?>
                         <tr>
                             <th scope="row"><?php echo $i + 1 ?></th>
-                            <td><?php echo $product['matricule'] ?></td>
-                            <td><?php echo $product['grade'] ?></td>
                             <td><?php echo $product['nom'].' '.$product['postnom'] ?></td>
+                            <td><?php echo 'Inconnu' ?></td>
+                            <td><?php echo $product['grade'] ?></td>
                             <td><?php echo $product['arrive'] ?></td>
                             <td><?php echo $product['depart'] ?></td>
 

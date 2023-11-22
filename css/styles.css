@@ -293,6 +293,13 @@ button {
    overflow: auto;
  }
 
+ thead{
+   font-size: 20px;
+ }
+
+ tbody{
+   font-size: 20px;
+ }
 
 
 
