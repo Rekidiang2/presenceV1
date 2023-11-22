@@ -23,9 +23,7 @@
     <section class="main">
         <div class="container1 flex-container">
             <div id="input">
-                <div class="heading">
-                    <h3>Ajouter Agent</h3>
-                </div>
+              
 
                 <!--Display Error-->
                 <?php if(isset($_GET['error'])) : ?>
@@ -33,21 +31,15 @@
                 <?php endif; ?>
                 
                 <!--Form-->
-                <form method="post" action="process/registre.proc.php">
+                <form method="post" action="process/presence.proc.php">
                     <div class="form-group">
                         <div>
-                            <input type="text" name="nom" placeholder="Nom">
+                            <input type="text" name="matricule" placeholder="Inserer votre Matricule">
                         </div>
-                        <div>
-                            <input type="text" name="postnom" placeholder="Postnom">
-                        </div>
-                        <div>
-                            <input type="text" name="matricule" placeholder="Matricule">
-                        </div>
-                        <div>
-                            <input type="text" name="grade" placeholder="Grade">
-                        </div>
-                        <input type="submit" name="submit" class="submit-btn" value="Enregistre"
+                        
+                        <input type="submit" name="arrive" class="submit-btn" value="Signaler Votre Arrive"
+                            aria-label="Sizing example input">
+                            <input type="submit" name="depart" class="submit-btn" value="Signaler Votre Depart"
                             aria-label="Sizing example input">
                     </div>
                 </form>
