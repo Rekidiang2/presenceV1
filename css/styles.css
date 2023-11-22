@@ -204,15 +204,15 @@ section {
  
    font-size: 2em;
    font-weight: bold;
+   text-align: center;
 }
 
-#input input[value]{
+
+
+#input .submit-btn{
    color: #fff;
    font-size: 2em;
    font-weight: bold;
-}
-
-#input .submit-btn{
 	padding:0px;
 	margin-bottom:20px;
 	width:100%;
@@ -221,6 +221,20 @@ section {
    height: 50px;
    background-color: var(--dark-light);
    border-radius: 1em;
+}
+
+#input input[name="arrive"]{
+   color: #fff;
+   font-size: 2em;
+   font-weight: bold;
+   background-color:var(--main-color);
+}
+
+#input input[name="depart"]{
+   color: #fff;
+   font-size: 2em;
+   font-weight: bold;
+   background-color:var(--dark-light);
 }
 
 .form-group {
