@@ -119,7 +119,7 @@ error_reporting(E_ALL);
 
 
 
-
+    <?php include_once 'footer.php'; ?>
 
 </body>
 
