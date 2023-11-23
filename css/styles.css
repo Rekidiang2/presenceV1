@@ -200,7 +200,16 @@ section {
    border-radius: 0.3em;
 }
 
+
+
 #input input[placeholder]{
+ 
+   font-size: 2em;
+   font-weight: bold;
+   text-align:left;
+}
+
+.img-label{
  
    font-size: 2em;
    font-weight: bold;
@@ -243,6 +252,17 @@ section {
 	gap: 10px;
 }
 
+
+
+.custom-file-upload {
+   border: 1px solid #301717;
+   display: inline-block;
+   padding: 6px 12px;
+   cursor: pointer;
+ }
+ 
+ 
+
 /*RECHERCHE */
 
 .search-container {
@@ -255,6 +275,13 @@ section {
 }
 
 input[type="text"] {
+   flex: 1;
+   padding: 10px;
+   border: none;
+   outline: none;
+}
+
+input[type="file"] {
    flex: 1;
    padding: 10px;
    border: none;
@@ -301,7 +328,18 @@ button {
    font-size: 20px;
  }
 
+ label {
+   font-family: sans-serif;
+   font-size: 1rem;
+   padding-right: 10px;
+ }
 
+ option {
+   font-size: 0.9rem;
+   padding: 2px 5px;
+   background-color: red;
+ }
+ 
 
 
 

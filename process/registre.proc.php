@@ -1,6 +1,8 @@
 <?php
 define ('ENVIRONMENT', 'development');
 include 'db.proc.php';
+include 'process/function.proc.php';
+display_error();
 
 
 //Check if form submitted
@@ -9,6 +11,8 @@ if(isset($_POST['submit'])){
 	$nom = trim(strtoupper(mysqli_real_escape_string($con, $_POST['nom'])));
 	$postnom = trim(strtoupper(mysqli_real_escape_string($con, $_POST['postnom'])));
 	$grade = trim(strtoupper(mysqli_real_escape_string($con, $_POST['grade'])));
+	
+
 	
 	//Set timezone
 	//date_default_timezone_set('America/New_York');

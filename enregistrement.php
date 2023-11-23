@@ -45,7 +45,9 @@
 
                 <!--Form-->
                 <form method="post" action="process/registre.proc.php">
+
                     <div class="form-group">
+
                         <div>
                             <input type="text" name="nom" placeholder="Nom">
                         </div>
@@ -58,6 +60,7 @@
                         <div>
                             <input type="text" name="grade" placeholder="Grade">
                         </div>
+
                         <input type="submit" name="submit" class="submit-btn" value="Enregistre"
                             aria-label="Sizing example input">
                     </div>
@@ -84,6 +87,7 @@
                         <th scope="col">Sexe</th>
                         <th scope="col">Matricule</th>
                         <th scope="col">Grade</th>
+                        <th scope="col">Action</th>
 
                     </thead>
                     <tbody>
@@ -96,6 +100,14 @@
                             <td><?php echo ' ' ?></td>
                             <td><?php echo $product['matricule'] ?></td>
                             <td><?php echo $product['grade'] ?></td>
+                            <td>
+                                <a href="update.php?id=<?php echo '$product[id]' ?>"
+                                    class="btn btn-sm btn-outline-primary">Edit</a>
+                                <form method="post" action="delete.php" style="display: inline-block">
+                                    <input type="hidden" name="id" value="<?php echo '$product[id]' ?>" />
+                                    <button type="submit" class="btn btn-sm btn-outline-danger">Delete</button>
+                                </form>
+                            </td>
 
 
                         </tr>
