@@ -28,20 +28,12 @@ $query = "SELECT * FROM liste WHERE matricule = $matricule  ";
 		
     }
 	
-	
-
     if ($image && $image['tmp_name']) {
         $imagePath = 'upload/' . randomString(8) . '/' . $image['name'];
         mkdir(dirname('../'.$imagePath));
         move_uploaded_file($image['tmp_name'], '../'.$imagePath);
     }
- 
-	
-	//Set timezone
-	//date_default_timezone_set('America/New_York');
-	//$time = date('h:i:s a',time());
-	
-	
+ 	
 	//Validate input
 	if(!isset($matricule) || $matricule == '' || !isset($nom) || $nom == '' || !isset($postnom) || $postnom == '' || !isset($grade) || $grade == ''){
 		$error = "Please fill in your name and a message";
@@ -50,9 +42,6 @@ $query = "SELECT * FROM liste WHERE matricule = $matricule  ";
 	} else {
 		// Insert data into the database
 		$query = "UPDATE liste (matricule =  $matricule, nom = $NOM, postnom = $postnom, grade = $grade, image=$image";
-
-
-
 		
 		if(!mysqli_query($con, $query)){
 			die('Error: '.mysqli_error($con));

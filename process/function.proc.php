@@ -1,12 +1,14 @@
 <?php
 require 'db.proc.php';
 
+#Function to display error
 function display_error(){
     ini_set('display_errors', 1);
     ini_set('display_startup_errors', 1);
     error_reporting(E_ALL);
 }
 
+#Function total number of record from liste table
 function count_query($con){
     $query_count = "SELECT COUNT(*) AS total_agent FROM liste  ";
 	$result_count = mysqli_query($con, $query_count);
@@ -14,21 +16,23 @@ function count_query($con){
     return $rs_count;
 }
 
+/*
 function record_mat($con, $matricule){
     $query = "SELECT * FROM liste WHERE matricule = $matricule  ";
 	$rs_record = mysqli_query($con, $query);
     $record = mysqli_fetch_assoc($rs_record);
     return $record;
 }
+*/
 
+#Query to extract liste of all agent in liste table
 function list_agent($con){
-
 	$query = "SELECT * FROM liste  ";
 	$result = mysqli_query($con, $query);
     return $result;
 }
 
-
+#Query to extract  all arrived agent for particular date
 function liste_presence($con){
     //Create Select Query
 	date_default_timezone_set('Africa/Kinshasa');
@@ -39,6 +43,7 @@ function liste_presence($con){
 }
 
 
+#Generate 8 random alpha numerique characters
 function randomString($n)
 {
     $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';

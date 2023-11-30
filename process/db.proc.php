@@ -1,6 +1,6 @@
 <?php
-//Connect to MySQL
 
+//Connect to MySQL
 $host="localhost";
 $username="root";
 $pwd="";

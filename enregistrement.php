@@ -89,8 +89,6 @@
                         <th scope="col">#</th>
                         <th scope="col">Nom</th>
                         <th scope="col">Postnom</th>
-                        <th scope="col">Prenom</th>
-                        <th scope="col">Sexe</th>
                         <th scope="col">Matricule</th>
                         <th scope="col">Grade</th>
                         <th scope="col">Action</th>
@@ -102,8 +100,6 @@
                             <th scope="row"><?php echo $i + 1 ?></th>
                             <td><?php echo $product['nom'] ?></td>
                             <td><?php echo $product['postnom'] ?></td>
-                            <td><?php echo 'Unknown' ?></td>
-                            <td><?php echo ' ' ?></td>
                             <td><?php echo $product['matricule'] ?></td>
                             <td><?php echo $product['grade'] ?></td>
                             <td>

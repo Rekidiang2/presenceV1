@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit();
     } else {
         // Insert data into the database
-        $query = "UPDATE liste SET nom = '$nom', postnom = '$postnom', grade = '$grade' WHERE matricule = '$matricule'";
+        $query = "UPDATE liste SET matricule = '$matricule', nom = '$nom', postnom = '$postnom', grade = '$grade' WHERE matricule = '$matricule'";
 
         
         if(!mysqli_query($con, $query)){
@@ -70,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link href="css/styles.css" rel="stylesheet" />
-    <title>Update</title>
+    <title>Mise a Jour</title>
 </head>
 
 <body>
@@ -116,7 +116,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <div>
                             <label>Grade</label>
                             <input type="text" name="grade" value="<?php echo $grade ?>">
-                </div>
+                        </div>
 
                         <input type="submit" name="submit" class="submit-btn" value="Update"
                             aria-label="Sizing example input">
