@@ -43,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         header("Location: updates.php?error=".urlencode($error));
         exit();
     } else {
-        // Insert data into the database
+        //Insert data into the database
         $query = "UPDATE liste SET matricule = '$matricule', nom = '$nom', postnom = '$postnom', grade = '$grade' WHERE matricule = '$matricule'";
 
         

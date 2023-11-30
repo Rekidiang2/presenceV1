@@ -74,6 +74,9 @@
             </div>
 
         </div>
+     
+
+        <div class="container1">
         <div class="heading">
             <h3>Liste des Agents</h3>
         </div>
@@ -81,8 +84,6 @@
             <input type="text" placeholder="Search...">
             <button type="submit">Search</button>
         </div>
-
-        <div class="container1 flex-container">
             <div id="table-box">
                 <table class="table">
                     <thead>

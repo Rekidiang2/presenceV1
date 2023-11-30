@@ -82,8 +82,7 @@ display_error() ;
                 <table class="table">
                     <thead>
                         <th scope="col">#</th>
-                        <th scope="col">Nom, Postnom et Prenom</th>
-                        <th scope="col">Sexe</th>
+                        <th scope="col">Nom et Postnom</th>
                         <th scope="col">Grade</th>
                         <th scope="col">Arrive</th>
                         <th scope="col">Depart</th>
@@ -94,7 +93,6 @@ display_error() ;
                         <tr>
                             <th scope="row"><?php echo $i + 1 ?></th>
                             <td><?php echo $product['nom'].' '.$product['postnom'] ?></td>
-                            <td><?php echo 'Inconnu' ?></td>
                             <td><?php echo $product['grade'] ?></td>
                             <td><?php echo $product['arrive'] ?></td>
                             <td><?php echo $product['depart'] ?></td>

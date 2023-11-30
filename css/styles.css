@@ -47,6 +47,7 @@ html::-webkit-scrollbar-thumb {
 
 section {
    padding: 5rem 10%;
+   
 }
 
 @keyframes fadeIn {
@@ -95,10 +96,11 @@ section {
    background-color: var(--dark);
    display: flex;
    padding-top: 2rem;
-   padding-bottom: 2rem;
+   padding-bottom: 1rem;
    box-shadow: var(--box-shadow);
    align-items: center;
    justify-content: space-between;
+   height: 90px;
 }
 
 .header .logo {
@@ -133,16 +135,15 @@ section {
 	top: 90px;
 	left: 0;
 	right: 0;
-
 	background-color: var(--dark-light);
 	display: flex;
-	
 	padding: 2rem;
 	box-shadow: var(--box-shadow);
 	align-items: center;
 	justify-content: space-between;
 	height: 50px;
-	position: sticky;
+   margin: 0;
+	
  }
 
  .sub-header .left-title {
@@ -183,6 +184,7 @@ section {
 	width:100%;
 	min-height:530px;
 	padding: 20px;
+  
 }
 
 /*FORMULAIRE*/
@@ -325,11 +327,11 @@ button {
  }
 
  thead{
-   font-size: 20px;
+   font-size: 15px;
  }
 
  tbody{
-   font-size: 20px;
+   font-size: 15px;
  }
 
  label {

@@ -12,10 +12,7 @@ if(isset($_POST['submit'])){
 	$postnom = trim(strtoupper(mysqli_real_escape_string($con, $_POST['postnom'])));
 	$grade = trim(strtoupper(mysqli_real_escape_string($con, $_POST['grade'])));
 
-	#Query the DB to obtain a record for particular matricule (primary Key)
-	$query = "SELECT * FROM liste WHERE matricule = $matricule";
-	$rs_record = mysqli_query($con, $query);
-	$record = mysqli_fetch_assoc($rs_record);
+	
 	
 	
 	//Validate input
@@ -24,6 +21,10 @@ if(isset($_POST['submit'])){
 		header("Location: ../enregistrement.php?error=".urlencode($error));
 		exit();
 	} else {
+		#Query the DB to obtain a record for particular matricule (primary Key)
+		$query = "SELECT * FROM liste WHERE matricule = '$matricule'";
+		$rs_record = mysqli_query($con, $query);
+		$record = mysqli_fetch_assoc($rs_record);
 
 		if($record['matricule']==$matricule){
 			$error = "Cet agent existe deja dans la base de donnees";
@@ -31,6 +32,9 @@ if(isset($_POST['submit'])){
 		exit();
 
 		}
+
+	
+
 		// Insert data into the database
 		$query = "INSERT INTO liste (matricule, nom, postnom, grade)
 				VALUES ('$matricule','$nom','$postnom', '$grade')";
