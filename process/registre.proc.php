@@ -1,7 +1,8 @@
 <?php
-define ('ENVIRONMENT', 'development');
+
 include 'db.proc.php';
-include 'process/function.proc.php';
+include 'function.proc.php';
+
 display_error();
 
 
@@ -11,22 +12,20 @@ if(isset($_POST['submit'])){
 	$nom = trim(strtoupper(mysqli_real_escape_string($con, $_POST['nom'])));
 	$postnom = trim(strtoupper(mysqli_real_escape_string($con, $_POST['postnom'])));
 	$grade = trim(strtoupper(mysqli_real_escape_string($con, $_POST['grade'])));
-	
 
 	
-	//Set timezone
-	//date_default_timezone_set('America/New_York');
-	//$time = date('h:i:s a',time());
 	
 	
 	//Validate input
 	if(!isset($matricule) || $matricule == '' || !isset($nom) || $nom == '' || !isset($postnom) || $postnom == '' || !isset($grade) || $grade == ''){
 		$error = "Please fill in your name and a message";
-		header("Location: registre.php?error=".urlencode($error));
+		header("Location: ../enregistrement.php?error=".urlencode($error));
 		exit();
 	} else {
-		$query = "INSERT INTO liste (matricule, nom, postnom, grade)
-				VALUES ('$matricule','$nom','$postnom', '$grade')";
+		// Insert data into the database
+		$query = "INSERT INTO liste (matricule, nom, postnom, grade, image)
+				VALUES ('$matricule','$nom','$postnom', '$grade', '$imagePath')";
+
 		
 		if(!mysqli_query($con, $query)){
 			die('Error: '.mysqli_error($con));

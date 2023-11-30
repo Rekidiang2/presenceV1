@@ -172,6 +172,10 @@ section {
 	padding: 20px;
 }
 
+.product-img {
+   width: 20px;
+}
+
 .container2{
 	background:#ffffff;
 	margin: 20px auto;

@@ -14,6 +14,13 @@ function count_query($con){
     return $rs_count;
 }
 
+function record_mat($con, $matricule){
+    $query = "SELECT * FROM liste WHERE matricule = $matricule  ";
+	$rs_record = mysqli_query($con, $query);
+    $record = mysqli_fetch_assoc($rs_record);
+    return $record;
+}
+
 function list_agent($con){
 
 	$query = "SELECT * FROM liste  ";

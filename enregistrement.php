@@ -4,6 +4,9 @@
 
 
     display_error();
+    $listeAgent = mysqli_fetch_assoc(list_agent($con));
+   
+    
     
 ?>
 
@@ -32,21 +35,22 @@
     </div>
 
     <section class="main">
-        <div class="container1 flex-container">
+        <div class="container1 flex-container"> 
             <div id="input">
                 <div class="heading">
                     <h3>Ajouter Agent</h3>
                 </div>
 
-                <!--Display Error-->
-                <?php if(isset($_GET['error'])) : ?>
+               <!--Display Error-->
+               <?php if(isset($_GET['error'])) : ?>
                 <div class="error"><?php echo $_GET['error']; ?></div>
                 <?php endif; ?>
 
                 <!--Form-->
-                <form method="post" action="process/registre.proc.php">
+                <form method="post" action="process/registre.proc.php" enctype="multipart/form-data">
 
                     <div class="form-group">
+                    
 
                         <div>
                             <input type="text" name="nom" placeholder="Nom">
@@ -63,8 +67,10 @@
 
                         <input type="submit" name="submit" class="submit-btn" value="Enregistre"
                             aria-label="Sizing example input">
+                        
                     </div>
                 </form>
+                <img src="/opt/lampp/htdocs/presenceV1/upload/z4z3Fljr/mbilia.jpeg" alt="" style="width: 50px;">
             </div>
 
         </div>
@@ -101,10 +107,11 @@
                             <td><?php echo $product['matricule'] ?></td>
                             <td><?php echo $product['grade'] ?></td>
                             <td>
-                                <a href="update.php?id=<?php echo '$product[id]' ?>"
+                               
+                                <a href="updates.php?matricule=<?php echo $product['matricule']?>"
                                     class="btn btn-sm btn-outline-primary">Edit</a>
-                                <form method="post" action="delete.php" style="display: inline-block">
-                                    <input type="hidden" name="id" value="<?php echo '$product[id]' ?>" />
+                                <form method="post" action="process/delete.proc.php" style="display: inline-block">
+                                    <input type="hidden" name="matricule" value="<?php echo $product['matricule']?>" />
                                     <button type="submit" class="btn btn-sm btn-outline-danger">Delete</button>
                                 </form>
                             </td>
