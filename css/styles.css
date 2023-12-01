@@ -257,6 +257,13 @@ section {
    background-color:var(--dark-light);
 }
 
+#input input[name="submit"]{
+   color: #fff;
+   font-size: 2em;
+   font-weight: bold;
+   background-color:var(--main-color);
+}
+
 .form-group {
 	display: flex;
 	flex-direction: column;
