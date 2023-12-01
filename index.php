@@ -31,6 +31,7 @@ display_error() ;
         </div>
     </div>
 
+    <!--Start section-->
     <section class="main">
         <div class="container1 flex-container">
             <div id="input">
@@ -48,7 +49,7 @@ display_error() ;
                 <form method="post" action="process/presence.proc.php">
                     <div class="form-group">
                         <div>
-                            <input type="text" name="matricule" placeholder="Inserer votre Matricule" id="input1">
+                            <input type="text" name="matricule" placeholder="Inserer votre Matricule" autocomplete="off" id="input1">
                         </div>
                         
                         <input type="submit" name="arrive" class="submit-btn" value="Arrive"
@@ -72,14 +73,14 @@ display_error() ;
                 </div>
 
         <div class="search-container">
-        <input type="text" placeholder="Search...">
-        <button type="submit">Search</button>
+        <input type="text"  id="myInput" placeholder="Recherche..." onkeyup="searchTable()">
+        <button type="submit"><i class="bi bi-search"></i></button>
     </div>
 
 
             <div id="table-box">
 
-                <table class="table">
+                <table id="myTable" class="table">
                     <thead>
                         <th scope="col">#</th>
                         <th scope="col">Nom et Postnom</th>

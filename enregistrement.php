@@ -19,6 +19,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>Enregistrement</title>
+
+    
+
 </head>
 
 <body>
@@ -70,7 +73,7 @@
                         
                     </div>
                 </form>
-                <img src="/opt/lampp/htdocs/presenceV1/upload/z4z3Fljr/mbilia.jpeg" alt="" style="width: 50px;">
+               
             </div>
 
         </div>
@@ -81,11 +84,11 @@
             <h3>Liste des Agents</h3>
         </div>
         <div class="search-container">
-            <input type="text" placeholder="Search...">
-            <button type="submit">Search</button>
+            <input type="text"  id="myInput" placeholder="Recherche..." onkeyup="searchTable()">
+            <button type="submit"><i class="bi bi-search"></i></button>
         </div>
             <div id="table-box">
-                <table class="table">
+                <table id="myTable" class="table">
                     <thead>
                         <th scope="col">#</th>
                         <th scope="col">Nom</th>
@@ -97,7 +100,7 @@
                     </thead>
                     <tbody>
                         <?php foreach (list_agent($con) as $i => $product) { ?>
-                        <tr>
+                        <tr> 
                             <th scope="row"><?php echo $i + 1 ?></th>
                             <td><?php echo $product['nom'] ?></td>
                             <td><?php echo $product['postnom'] ?></td>
@@ -109,7 +112,7 @@
                                     class="btn btn-sm btn-outline-primary">Edit</a>
                                 <form method="post" action="process/delete.proc.php" style="display: inline-block">
                                     <input type="hidden" name="matricule" value="<?php echo $product['matricule']?>" />
-                                    <button type="submit" class="btn btn-sm btn-outline-danger">Delete</button>
+                                    <button type="submit" class="btn btn-sm btn-outline-danger"><i class="bi bi-eye"></i></button>
                                 </form>
                             </td>
 
@@ -128,6 +131,8 @@
     </section>
 
     <?php include_once 'footer.php'; ?>
+    
+    <script src="js/script.js"></script>
 </body>
-
+<script src="js/script.js"></script>
 </html>
