@@ -25,7 +25,7 @@ display_error() ;
     <!--Sub-Header-->
     <div class="sub-header">
         <p class="left-title">Liste de Presence</p>
-
+ 
         <div id="rigth-title">
             <p class="left-title">Date : <?php echo date('d-m-Y');?></p>
         </div>
@@ -48,7 +48,7 @@ display_error() ;
                 <form method="post" action="process/presence.proc.php">
                     <div class="form-group">
                         <div>
-                            <input type="text" name="matricule" placeholder="Inserer votre Matricule">
+                            <input type="text" name="matricule" placeholder="Inserer votre Matricule" id="input1">
                         </div>
                         
                         <input type="submit" name="arrive" class="submit-btn" value="Arrive"

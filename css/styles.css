@@ -213,6 +213,11 @@ section {
    font-size: 2em;
    font-weight: bold;
    text-align:left;
+   padding-left: 1em;
+}
+
+#input1{
+   text-align:center!important;
 }
 
 .img-label{
