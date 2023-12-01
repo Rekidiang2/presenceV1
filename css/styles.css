@@ -297,6 +297,7 @@ input[type="text"] {
    padding: 10px;
    border: none;
    outline: none;
+   font-size: 18px;
 }
 
 input[type="file"] {
@@ -312,6 +313,7 @@ button {
    background-color: #007bff;
    color: #fff;
    cursor: pointer;
+   font-size: 18px;
 }
 
 /* Media query for mobile responsiveness */
