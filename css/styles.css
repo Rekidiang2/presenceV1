@@ -292,6 +292,37 @@ section {
    overflow: hidden;
 }
 
+.date-container {
+   display: flex;
+   justify-content: space-between ;
+   max-width: 600px;
+   margin: 20px auto;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   overflow: hidden;
+   background-color: #fff;
+}
+
+.date-container input[type="date"]{
+   font-size: 20px; 
+   color: var(--black);
+   font-weight: bold;
+   align-items: center;
+   padding-left: 1em;
+  
+}
+
+
+
+.date-container input[type="submit"]{
+   font-weight: bold;
+   font-size: 20px;
+   background-color:var(--main-color);
+   color: #fff;
+   padding-left: 1em;
+   padding-right: 1em;
+}
+
 input[type="text"] {
    flex: 1;
    padding: 10px;
@@ -299,6 +330,8 @@ input[type="text"] {
    outline: none;
    font-size: 18px;
 }
+
+
 
 input[type="file"] {
    flex: 1;
@@ -316,11 +349,17 @@ button {
    font-size: 18px;
 }
 
+
+
 /* Media query for mobile responsiveness */
 @media (max-width: 767px) {
    .search-container {
        flex-direction: column;
    }
+
+   .date-container {
+      flex-direction: column;
+  }
 
    input[type="text"] {
        width: 100%;
